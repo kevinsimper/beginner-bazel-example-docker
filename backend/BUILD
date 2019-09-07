@@ -1,6 +1,6 @@
 genrule(
   name = "build",
-  srcs = ["server.js"],
-  cmd = "cat $(location server.js) > $(location server.build.js)",
-  outs = ["server.build.js"]
+  srcs = ["Dockerfile", "server.js"],
+  cmd = "tar -czh . | docker build -q -t backend -f backend/Dockerfile - > $@",
+  outs = ["imagesha.txt"]
 )
