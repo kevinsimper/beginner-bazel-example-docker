@@ -1,0 +1,5 @@
+bazel-beginner-bazel-example-docker
+bazel-bin
+bazel-genfiles
+bazel-out
+bazel-testlogs
